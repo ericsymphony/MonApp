@@ -1,0 +1,29 @@
+# This file is the entry point to configure your own HTTP routes.
+# Files in the routes/ subdirectory configure the routes for your dependencies.
+
+index:
+    path: /
+    defaults: { _controller: 'App\Controller\MonApp\FrontController::index' }
+
+accueil:
+    path: /
+    controller: Symfony\Bundle\FrameworkBundle\Controller\RedirectController::redirectAction
+    defaults:
+        route: index
+        permanent: true
+
+elements:
+    path: /
+    defaults: { _controller: 'App\Controller\MonApp\FrontController::elements' }
+
+generic:
+    path: /
+    controller: Symfony\Bundle\FrameworkBundle\Controller\RedirectController::redirectAction
+    defaults:
+        route: generic
+        permanent: true
+
+landing:
+    path: /
+    defaults: { _controller: 'App\Controller\MonApp\FrontController::landing' }
+
