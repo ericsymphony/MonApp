@@ -12,6 +12,7 @@ namespace App\Controller\MonApp;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\Routing\Annotation\Route;
 
+
 class FrontController extends Controller
 {
     public function index()
@@ -19,11 +20,6 @@ class FrontController extends Controller
         return $this->render('front/index.html.twig');
     }
 
-    /**
-     * Page permettant d'afficher la page elements
-     * @Route("/", name="elements",methods={"GET")
-     * @return \Symfony\Component\HttpFoundation\Response
-     */
     public function elements()
     {
         return $this->render('front/elements.html.twig');
@@ -37,6 +33,11 @@ class FrontController extends Controller
     public function landing()
     {
         return $this->render('front/landing.html.twig');
+    }
+
+    public function contact()
+    {
+        return $this->render('front/contact.html.twig');
     }
 
 }

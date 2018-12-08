@@ -2,8 +2,8 @@
 # Files in the routes/ subdirectory configure the routes for your dependencies.
 
 index:
-    path: /
-    defaults: { _controller: 'App\Controller\MonApp\FrontController::index' }
+    path: /index
+    defaults: { _controller: 'App\Controller\MonApp\FrontController::index'}
 
 accueil:
     path: /
@@ -12,18 +12,21 @@ accueil:
         route: index
         permanent: true
 
+landing:
+    path: /landing
+    defaults: { _controller: 'App\Controller\MonApp\FrontController::landing'}
+
 elements:
-    path: /
-    defaults: { _controller: 'App\Controller\MonApp\FrontController::elements' }
+    path: /elements
+    defaults: { _controller: 'App\Controller\MonApp\FrontController::elements'}
 
 generic:
-    path: /
-    controller: Symfony\Bundle\FrameworkBundle\Controller\RedirectController::redirectAction
-    defaults:
-        route: generic
-        permanent: true
+    path: /generic
+    defaults: { _controller: 'App\Controller\MonApp\FrontController::generic'}
 
-landing:
-    path: /
-    defaults: { _controller: 'App\Controller\MonApp\FrontController::landing' }
+
+contact:
+    path: /contact
+    defaults: { _controller: 'App\Controller\MonApp\FrontController::contact'}
+
 

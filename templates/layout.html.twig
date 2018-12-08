@@ -1,8 +1,8 @@
 {% extends "base.html.twig" %}
 
 {% block stylesheets %}
-<link rel="stylesheet" href="assets/css/main.css" />
-<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+<link rel="stylesheet" href="{{ asset('assets/css/main.css')}}"/>
+<noscript><link rel="stylesheet" href="{{ asset('assets/css/noscript.css')}}"/></noscript>
 {% endblock %}
 
 {% block body %}
@@ -10,20 +10,19 @@
 
     {% include 'components/_banner.html.twig' %}
 
-    {% block content '' %}
-
-    {% include 'components/_contact.html.twig' %}
+{% block content '' %}
 
     {% include 'components/_footer.html.twig' %}
+
 {% endblock %}
 
 {% block javascripts %}
-<!-- Scripts -->
-<script src="assets/js/jquery.min.js"></script>
-<script src="assets/js/jquery.scrolly.min.js"></script>
-<script src="assets/js/jquery.scrollex.min.js"></script>
-<script src="assets/js/browser.min.js"></script>
-<script src="assets/js/breakpoints.min.js"></script>
-<script src="assets/js/util.js"></script>
-<script src="assets/js/main.js"></script>
+    <!-- Scripts -->
+    <script src="{{ asset('assets/js/jquery.min.js')}}"></script>
+    <script src="{{ asset('assets/js/jquery.scrolly.min.js')}}"></script>
+    <script src="{{ asset('assets/js/jquery.scrollex.min.js')}}"></script>
+    <script src="{{ asset('assets/js/browser.min.js')}}"></script>
+    <script src="{{ asset('assets/js/breakpoints.min.js')}}"></script>
+    <script src="{{ asset('assets/js/util.js')}}"></script>
+    <script src="{{ asset('assets/js/main.js')}}"></script>
 {% endblock %}
