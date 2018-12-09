@@ -20,7 +20,28 @@
         </ul>
         <ul class="actions stacked">
             <li><a href="#" class="button primary fit">Get Started</a></li>
-            <li><a href="#" class="button fit">Log In</a></li>
+
+            <!-- Ajout des fonctions Inscription et connexion
+            {% if is_granted('IS_AUTHENTICATED_FULLY') %}
+                <li>
+                    <a href="{{ path('security_deconnexion') }}">
+                        Déconnexion
+                    </a>
+                </li>
+            {% else %}
+                <li {{ active == 'inscription' ? 'class="current"' }}>
+                    <a href="{{ path('membre_inscription') }}">
+                        Inscription
+                    </a>
+                </li>
+                <li {{ active == 'connexion' ? 'class="current"' }}>
+                    <a href="{{ path('security_connexion') }}">
+                        Connexion
+                    </a>
+                </li>
+            {% endif %}
+
+            <!--<li><a href="#" class="button fit">Log In</a></li>-->
         </ul>
     </nav>
 
